@@ -11,7 +11,7 @@ println(displayWidth, displayHeight);
 pic1 = loadImage("molly.jpg");
 pic2 = loadImage("tandt.jpg");
 //
-//Aspect Ration Calculations
+//Aspect Ratio Calculations
 int pic1Width = 310;
 int pic1Height = 488;
 int pic2Width = 225;
@@ -70,4 +70,4 @@ rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
 image(pic1, rectXPic1, rectyPic1, rectWidthPic1, rectHeightPic1);
 image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
 //
-//End programme
+//End program
