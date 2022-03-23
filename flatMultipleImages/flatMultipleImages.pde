@@ -55,6 +55,7 @@ if ( heightPic2Larger == true ) imageWidthRatioPic2 = float (smallerPic2Dimensio
 if ( heightPic2Larger == true ) imageHeightRatioPic2 = float (largerPic2Dimension) / float (largerPic2Dimension);
 println(imageWidthRatioPic1, imageHeightRatioPic1, imageWidthRatioPic2, imageHeightRatioPic2);
 //
+//
 rectXPic1 = displayWidth*1/4;
 rectyPic1 = displayHeight*0;
 rectWidthPic1 = displayWidth*1/2;
@@ -64,10 +65,22 @@ rectYPic2 = displayHeight*1/2;
 rectWidthPic2 = displayWidth*6/8;
 rectHeightPic2 = displayHeight*1/2;
 //
+//Final Aspect Ratio Calculations
+float pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted;
+pic1WidthAdjusted = rectWidthPic1 * imageWidthRatioPic1;
+pic1HeightAdjusted = rectHeightPic1 * imageHeightRatioPic1;
+pic2WidthAdjusted = rectWidthPic2 * imageWidthRatioPic2;
+pic2HeightAdjusted = rectHeightPic2 * imageHeightRatioPic2;
+println (pic1Width, pic1Height, pic2Width, pic2Height) ;
+println (pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted);
+//
+//
 //Rectangle Layout & Image Printing on Canvas
 rect(rectXPic1, rectyPic1, rectWidthPic1, rectHeightPic1);
 rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
-image(pic1, rectXPic1, rectyPic1, rectWidthPic1, rectHeightPic1);
-image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
-//
+// Image using rect() variables
+image(pic1, rectXPic1, rectyPic1, pic1WidthAdjusted, pic1HeightAdjusted);
+image(pic2, rectXPic2, rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted);
+//Change the rect() variable to aspect Ratio
+
 //End program
