@@ -1,5 +1,5 @@
 //Variables
-float rectXPic1, rectyPic1, rectWidthPic1, rectHeightPic1;
+float rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1;
 float rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2;
 PImage pic1, pic2;
 //Geometry
@@ -57,7 +57,7 @@ println(imageWidthRatioPic1, imageHeightRatioPic1, imageWidthRatioPic2, imageHei
 //
 //
 rectXPic1 = displayWidth*1/4;
-rectyPic1 = displayHeight*0;
+rectYPic1 = displayHeight*0;
 rectWidthPic1 = displayWidth*1/2;
 rectHeightPic1 = displayHeight*1/2;
 rectXPic2 = displayWidth*1/8;
@@ -76,10 +76,10 @@ println (pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdj
 //
 //
 //Rectangle Layout & Image Printing on Canvas
-rect(rectXPic1, rectyPic1, rectWidthPic1, rectHeightPic1);
-rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
+//rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);
+//rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
 // Image using rect() variables
-image(pic1, rectXPic1, rectyPic1, pic1WidthAdjusted, pic1HeightAdjusted);
+image(pic1, rectXPic1, rectYPic1, pic1WidthAdjusted, pic1HeightAdjusted);
 image(pic2, rectXPic2, rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted);
 //Change the rect() variable to aspect Ratio
 
